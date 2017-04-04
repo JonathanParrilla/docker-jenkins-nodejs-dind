@@ -41,6 +41,9 @@ RUN chmod +x /usr/local/bin/docker-compose
 RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 RUN apt-get install -y nodejs
 
+# Install Cross Browser Testing Tunnels
+RUN npm install -g cbt_tunnels
+
 # Add supervisord
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
