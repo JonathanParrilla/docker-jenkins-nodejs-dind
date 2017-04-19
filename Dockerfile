@@ -44,6 +44,14 @@ RUN apt-get install -y nodejs
 # Install Cross Browser Testing Tunnels
 RUN npm install -g cbt_tunnels
 
+# Install Dependecies
+npm install lodash --save
+npm install request -g
+npm install clui -g
+npm install cli-color -g
+npm install yargs -g
+npm install socket.io-client -g
+
 # Add supervisord
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
